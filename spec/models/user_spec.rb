@@ -90,6 +90,9 @@ RSpec.describe Memo, type: :model do
       expect(bad_memo).to_not be_valid
     end
   end
+
+  # This test tests the associations or rather the relationships between the user and the memos due to the reason that we are trying to see that a user has many memos and that a memo 
+  # only has one user
   describe "Associations" do
     it "should have many memos" do
       assoc = Memo.reflect_on_association(:user)
