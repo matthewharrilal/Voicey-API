@@ -51,3 +51,4 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 # Gemfile
 gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~> 2.3.0'
+gem 'active_model_serializers'
