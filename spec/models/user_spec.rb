@@ -18,6 +18,12 @@ RSpec.describe User, type: :model do
     end
   end
 
+    it "is invalid without a password" do 
+      bad_user = User.new(name: "Eliel", email: "test@gmail.com", password: nil)
+      expect(bad_user).to_not be_valid
+    end
+  end
+
   describe "Associations" do
     it "should have many memos" do
       assoc = User.reflect_on_association(:memos)
