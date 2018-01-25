@@ -45,3 +45,5 @@ group :test do
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
 end
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
