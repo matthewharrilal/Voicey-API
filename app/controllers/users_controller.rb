@@ -93,6 +93,8 @@ RSpec.describe "UserControllers", type: :request do
         # Therefore as the headers we pass the token around as opposed to essentially logging in everywhere 
         get "/users", headers: { 'Authorization' => full_token }
       }
+
+      # And when there is authentication then what we have to do is we get a successful response back meaning that the user has been logged in successfully
       it "succeeds when there is authentication" do
         expect(response).to be_success
       end
