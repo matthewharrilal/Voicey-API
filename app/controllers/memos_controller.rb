@@ -17,6 +17,10 @@ class MemosController < ApplicationController
   def create
     @memo = Memo.new(memo_params)
 
+    # What this line of code essentially does is that it assigns what ever memos are created have to be linked to the current user first or else there would be no way to fetch the
+    # the accurate memos for the current logged in user
+    @memo.user = current_user
+
     if @memo.save
       render json: @memo, status: :created, location: @memo
     else
