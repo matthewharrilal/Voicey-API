@@ -38,7 +38,7 @@ class User < ApplicationRecord
       end
       
       # Essentially what this function does for is is that we are encrypting the users password when the user signs up
-      def encrypt_password do
+      def encrypt_password 
         if password.present?
           self.password_salt = BCrypt::Engine.generate_salt
           self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
